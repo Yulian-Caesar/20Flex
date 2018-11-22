@@ -1,0 +1,37 @@
+.ever-popup {
+	background: rgba(232, 244, 249, 0.9) !important;
+}
+.ever-popup__inner {
+	width: 770px !important;
+}
+.ever-popup__close:after, 
+.ever-popup__close:before {
+	background: #f57d02 !important;
+}
+.popup {
+	&-wrap {
+		background: url(../img/home-bg.png) #fcfcfd;
+		background-size: cover;
+		height: 540px !important;
+		position: relative;
+		margin-top: 25px !important;
+	}
+	&-form {
+		margin-left: auto;
+		top: -25px;
+	}
+	&-people {
+		position: absolute;
+		left: -55px;
+		top: 60px;
+		height: 540px;
+	}
+	&-product {
+		position: absolute;
+		bottom: -115px;
+		left: -100px;
+	}
+	&-product2 {
+		margin: 0 0 -50px -65px;
+	}
+}
