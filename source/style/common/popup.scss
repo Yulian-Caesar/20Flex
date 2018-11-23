@@ -35,3 +35,50 @@
 		margin: 0 0 -50px -65px;
 	}
 }
+
+@media screen and (max-width: 1023px) {
+	.ever-popup__inner {
+		width: 300px !important;
+	}
+	.popup {
+		&-people {
+			display: none;
+		}
+		&-wrap {
+			display: -webkit-flex !important;
+			display: -moz-flex !important;
+			display: -ms-flex !important;
+			display: -o-flex !important;
+			display: flex !important;
+			flex-direction: column;
+			background: #fcfcfd;
+			height: auto !important;
+			padding: 5px;
+			margin-top: 0 !important;
+			.form-arrow {
+				display: none;
+			}
+		}
+		&-form {
+			order: 2;
+			margin: 0 auto;
+			top: 0;
+			margin-top: 20px;
+		}
+		&-product {
+			position: relative;
+			left: 0;
+			top: 0;
+			bottom: inherit;
+		}
+		&-product1 {
+			width: 150px;
+		}
+		&-product2 {
+			width: 225px;
+			position: absolute;
+			bottom: 35px;
+			right: 0;
+		}
+	}
+}
