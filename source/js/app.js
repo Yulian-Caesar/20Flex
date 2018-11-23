@@ -272,80 +272,8 @@ $(document).ready(function () {
         ]
     });
 
-    $('.slider__bottom').slick({
-        infinite: true,
-        slidesToShow: 1,
-        slidesToScroll: 1,
-        fade: true,
-        dots: false,
-        arrows:false,
-        adaptiveHeight: true,
-        asNavFor: '.slider__top',
-        touchMove: false,
-        responsive: [
-            {
-                breakpoint: 1024,
-                settings: {
-                    slidesToShow: 1
 
-                }
-            }
-        ]
-    });
-
-    $('.slider__top').slick({
-        infinite: true,
-        slidesToShow: 2,
-        slidesToScroll: 1,
-        variableWidth: true,
-        arrows: true,
-        /*fade: true,
-        speed: 300,*/
-        centerMode: true,
-        focusOnSelect: true,
-        asNavFor: '.slider__bottom',
-        dots: false,
-        responsive: [
-            {
-                breakpoint: 1024,
-                settings: {
-                    slidesToShow: 1,
-                    slidesToScroll: 1,
-                    infinite: true,
-                    centerMode: true
-                }
-            }
-        ]
-    });
 
 
 });
 
-$(document).ready(function(){
-    $('.count').text(0);
-   var show = true;
-     var countbox = ".use";                                            // назва блоку з лічильником
-     $(window).on("scroll", function(){
-      if(!show) return false;                               // Відміна анімації, якщо вона уже була виконана
-      var w_top = $(window).scrollTop();                    // Кількість пікселів на яку прокручена сторінка
-      var e_top = $(countbox).offset().top - 1100;       // Відстань від блоку з лічильника до верху всього документу
-      var w_height = $(window).height();                    // Висота вікна браузера
-      var d_height = $(document).height();                  // Висота всього документа
-      var e_height = $(countbox).outerHeight();             // Повна висока блоку з лічильником
-      if(w_top >= e_top || w_height + w_top == d_height || e_height + e_top < w_height){
-       $('.count').each(function(){
-        $(this).animate({
-         count: $(this).data("name")
-        }, {
-         duration: 2500,                                                        //час анімації
-         easing: 'swing',
-         step:function(now){
-          $(this).text(Math.ceil(now));
-         }
-        });
-       });
-
-       show = false;
-      }
-     });
-});
