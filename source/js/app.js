@@ -302,7 +302,28 @@ $(document).ready(function () {
         }
       }
     ]
-  });
+});
+
+$('.effective__slide').slick({
+    slidesToShow: 3,
+    variableWidth: true,
+    responsive: [
+      {
+        breakpoint: 1024,
+        settings: {
+          slidesToShow: 2,
+          slidesToScroll: 1
+        }
+      }, 
+      {
+        breakpoint: 768,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1 
+        }
+      }
+    ]
+});
 
     $('.components__slider').slick({
         infinity: true,
