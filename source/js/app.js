@@ -253,6 +253,11 @@ function postDate(sa, countryName, isAbbreviated) {
 }
 
 
+$(".open-info").click(function(e){
+    // e.preventDefault();
+    var block = $(this).parents(".wrong-treatment-wrap__item");
+    block.toggleClass("active").siblings().removeClass("active");
+})
 function youtubeShowVideo() {
     var i, c, y, v, n;
     v = document.getElementsByClassName("youtube");
@@ -322,4 +327,3 @@ $(document).ready(function () {
         ]
     });
 });
-

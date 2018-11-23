@@ -32,6 +32,9 @@
       color: #656d76;
       span {
         border-bottom: 1px dotted #000;
+        &:hover {
+          border-bottom: none;
+        }
       }
     }
   }
@@ -58,6 +61,7 @@
     padding-left: 295px;
     position: relative;
     &__content {
+      width: 100%;
       padding-top: 10px;
     }
   }
@@ -93,6 +97,7 @@
       display: flex;
       align-items: center;
       margin-bottom: 15px;
+      flex: none;
       &:last-child {
         margin-bottom: 0;
       }
@@ -140,6 +145,7 @@
     width: 100%;
     &__img {
       margin-right: 45px;
+      flex: none;
     }
     &__product2 {
       margin-left: -75px;
@@ -196,3 +202,112 @@
   }
 }
 
+@media screen and (max-width:1199px) {
+  .header {
+    margin-bottom: 15px;
+    &-item {
+      &__img {
+        margin-right: 10px;
+      }
+      &__link {
+        font-size: 15px;
+      }
+    }
+  }
+  .home {
+    &-people {
+      left: -100px;
+    }
+    &-title {
+      font-size: 50px;
+    }
+    &-wrap {
+      &__content {
+        padding-top: 0;
+      }
+    }
+    .svg-flex-arrow1 {
+      display: none;
+    }
+    &-list {
+      &__text {
+        font-size: 20px;
+        line-height: 1;
+      }
+    }
+  }
+}
+@media screen and (max-width:1023px) {
+  .header {
+    padding-left: 0;
+  }
+  .home {
+    max-height: inherit;
+    &-people {
+      top: 250px;
+      left: 0px;
+    }
+    &-title {
+      font-size: 40px;
+      line-height: 1;
+      br {
+        display: none;
+      }
+    }
+    &-descr {
+      font-size: 20px;
+      line-height: 1;
+      margin-bottom: 15px;
+      br {
+        display: none;
+      }
+    }
+    &-wrap {
+      padding-left: 0;
+      flex-wrap: wrap;
+      &__content {
+        display: -webkit-flex;
+        display: -moz-flex;
+        display: -ms-flex;
+        display: -o-flex;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        text-align: center;
+      }
+    }
+    &-product {
+      position: inherit;
+      width: auto;
+      left: 0;
+      bottom: -370px;
+      &__img {
+        margin-right: 0;
+      }
+      &__list {
+        display: none;
+      }
+      &__product1 {
+      width: 190px;
+      }
+      &__product2 {
+        width: 300px;
+      }
+    }
+    &-watch {
+      margin-left: auto;
+      &__text {
+        text-align: left;
+        margin-left: 10px;
+      }
+    }
+    &-list {
+      &__img {
+        margin-right: 10px;
+      }
+      &__text {
+        font-size: 18px;
+      }
+    }
+  }
+}

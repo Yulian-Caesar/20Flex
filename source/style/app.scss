@@ -103,6 +103,7 @@ input::-ms-clear {
   background-color: #ffffff;
   text-align: center;
   position: relative;
+  flex: none;
   &-arrow {
     position: absolute;
     right: -100px;
@@ -238,6 +239,45 @@ input::-ms-clear {
   transform: translate(0, -50%); 
 }
 
+// .box-arrow {
+//   border-radius: 50%;
+//   width: 52px;
+//   height: 52px;
+//   display: -webkit-flex;
+//   display: -moz-flex;
+//   display: -ms-flex;
+//   display: -o-flex;
+//   display: flex;
+//   justify-content: center;
+//   align-items: center;
+//   background-color: #f4f7f9;
+// }
+// .navigation-arrow {
+//   display: -webkit-flex;
+//   display: -moz-flex;
+//   display: -ms-flex;
+//   display: -o-flex;
+//   display: flex;
+//   &:hover {
+//     fill: #f57d02;
+//   }
+// }
+
+.open-info {
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  cursor: pointer;
+  font-size: 22px;
+  line-height: 24px;
+  background: #ec7500;
+  &:before {
+    content: "+";
+    width: 100%;
+    color: #fff;
+  }
+}
+
 .btn {
   position: relative;
   z-index: 10;
@@ -249,7 +289,7 @@ input::-ms-clear {
   font-size: 28px;
   font-weight: 700;
   outline: 0;
-  width: 100%;
+  width: 226px;
   height: 65px;
   box-shadow: inset 0 0 4px rgba(38, 144, 133, 0.48),
   0 16px 26px -12px #269085,
@@ -259,7 +299,8 @@ input::-ms-clear {
   cursor: pointer;
   border-radius: 33px;
   border: 0 solid #f0aa9c;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  // border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  border-bottom: 1px solid rgba(70, 185, 166, 0.1);
   &:hover {
     box-shadow: inset 0 0 4px rgba(38, 144, 133, 0.48),
     0 6px 0 -2px #269085;
@@ -279,6 +320,10 @@ input::-ms-clear {
   }
 }
 
+::-webkit-input-placeholder { color: #bdc3ca; font-weight: 400; font-size: 16px; }
+::-moz-placeholder          { color: #bdc3ca; font-weight: 400; font-size: 16px; } /* Firefox 19+ */
+:-moz-placeholder           { color: #bdc3ca; font-weight: 400; font-size: 16px; } /* Firefox 18- */
+:-ms-input-placeholder      { color: #bdc3ca; font-weight: 400; font-size: 16px; }
 
 .youtube {
   background-color: #000;
