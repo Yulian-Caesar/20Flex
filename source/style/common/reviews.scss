@@ -1,15 +1,258 @@
+.reviews {
+  &__subtitle {
+    text-align: center;
+    color: #2b3541;
+    font-size: 22px;
+    font-weight: 500;
+    line-height: 1;
+    margin-top: 9px;
+  }
+  & .slick-list {
+    z-index: 10;
+  }
+  & .slick-dots li {
+    width: 18px;
+    height: 18px;
+  }
+  & .slick-dots {
+    position: static;
+    margin-top: 50px;
+  }
+  & .slick-dots li button {
+     width: 18px;
+     height: 18px;
+     border: 4px solid #ffffff;
+     background-color: #ecf0f2;
+     border-radius: 50%;
+   }
+  & .slick-dots li.slick-active button {
+    border: 4px solid #ffc283;
+    background-color: #f57d02;
+  }
+  & .slick-dots li button:before {
+    content: '';
+  }
+  &__next,
+  &__prev {
+    position: absolute;
+    top: 317px;
+    width: 52px;
+    height: 52px;
+    background-color: #f4f7f9;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 10;
+    &:hover svg .st0 {
+      fill: #f57d02;
+
+    }
+  }
+  &__next {
+    right: -52px;
+    & svg {
+      transform: scale(-1);
+    }
+  }
+  &__prev {
+    left: -52px;
+  }
+  & svg {
+    width: 20px;
+    height: 19px;
+    & .st0 {
+      fill: #CCCCCC;
+    }
+  }
 
 
+  &__wrap {
+    width: 100%;
+    position: relative;
+  }
+  & .slick-dotted.slick-slider {
+    margin-bottom: 0;
+  }
+  &__slider {
+    margin-top: 75px;
+    position: relative;
+    &::after,
+    &::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      width: 1px;
+      height: 634px;
+      background-color: #dceef3;
+      z-index: 0;
+    }
+    &::after {
+      left: 384px;
+    }
+    &::before {
+      right: 382px;
+    }
+  }
+  &__inner {
+    width: 370px;
+    &--even {
+      width: 430px;
+    }
+  }
+  &__item {
+    min-height: 634px;
+    position: relative;
+    z-index: 3;
+    background-color: #fff;
+    width: 320px;
+    margin-right: auto;
+    margin-left: auto;
+    text-align: center;
+  }
+  &__foto {
+    margin-right: auto;
+    margin-left: auto;
+  }
+  &__name {
+    color: #656d76;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 40px;
+    border-radius: 20px;
+    background-color: #dfeff3;
+    width: 256px;
+    margin-right: auto;
+    margin-left: auto;
+    margin-top: -22px;
+    position: relative;
+    z-index: 2;
+    &--bold {
+      color: #2b3541;
+      font-size: 18px;
+      font-weight: 900;
+    }
+  }
+  &__problem {
+    color: #2b3541;
+    font-size: 18px;
+    font-weight: 900;
+    line-height: 22px;
+    margin-top: 25px;
+  }
+  &__text {
+    color: #656d76;
+    font-size: 17px;
+    font-weight: 400;
+    line-height: 26px;
+    margin-top: 10px;
+  }
+  &__name--bold {
+    font-size: 17px;
+  }
+}
 
-@media screen and (max-width: 1199px){
 
+@media screen and (max-width: 1300px){
+  .reviews {
+    & .wrapper {
+      max-width: 1024px;
+      padding-right: 10px;
+      padding-left: 10px;
+    }
+    &__slider {
+      margin-top: 30px;
+      &::before,
+      &::after {
+        display: none;
+      }
+    }
+    &__item {
+      min-height: auto;
+    }
+    &__next,
+    &__prev {
+      width: 30px;
+      height: 30px;
+      & svg {
+        width: 14px;
+      }
+    }
+    &__next {
+      right: 0;
+    }
+    &__prev {
+      left: 0;
+    }
+    &__wrap {
+      padding-right: 37px;
+      padding-left: 37px;
+    }
+    &__inner {
+      width: 310px;
+    }
+    &__item {
+      width: 290px;
+    }
+    &__problem {
+      margin-top: 10px;
+      font-size: 17px;
+    }
+    &__text {
+      font-size: 16px;
+      line-height: 1.5;
+    }
+    & .slick-dots {
+      margin-top: 25px;
+    }
+
+  }
 }
 @media screen and (max-width: 1023px){
-
+  .reviews {
+    & .wrapper {
+      max-width: 768px;
+    }
+    &__inner {
+      width: 337px;
+    }
+    &__item {
+      width: 310px;
+    }
+  }
 }
 @media screen and (max-width: 767px){
-
+  .reviews {
+    & .wrapper {
+      max-width: 640px;
+    }
+    &__item {
+      width: 370px;
+    }
+  }
 }
 @media screen and (max-width: 639px){
-
+  .reviews {
+    &__item {
+      width: 320px;
+    }
+  }
+}
+@media screen and (max-width: 479px){
+  .reviews {
+    &__wrap {
+      padding-right: 0;
+      padding-left: 0;
+    }
+    &__item {
+      width: 300px;
+    }
+    &__next,
+    &__prev {
+      top: 200px;
+    }
+    &__problem {
+      margin-top: 30px;
+    }
+  }
 }
