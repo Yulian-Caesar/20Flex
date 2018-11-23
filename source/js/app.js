@@ -1,8 +1,8 @@
-document.addEventListener("DOMContentLoaded", function() {
+document.addEventListener("DOMContentLoaded", function () {
 
     // Вивід дати (+ час).
     // Arguments: dateFormat (string), language (string), abbreviated (bool). Default: 'dd.mm.yyyy', 'ru', false
-    postDate(/*'dateFormat', 'ru', false*/);
+    postDate( /*'dateFormat', 'ru', false*/ );
 
 });
 
@@ -17,52 +17,52 @@ function postDate(sa, countryName, isAbbreviated) {
 
     var sa = sa || 'dd.mm.yyyy',
         msInDay = 86400000,
-        counterLength = 90,  // Максимальна кількість вімотаних днів. Змінюємо за необхідності.
+        counterLength = 90, // Максимальна кількість вімотаних днів. Змінюємо за необхідності.
         months,
-        countryName = countryName || 'ru',  // Мова для місяців.
+        countryName = countryName || 'ru', // Мова для місяців.
         isAbbreviated = isAbbreviated || false, // Якщо потрібно скорочений варіант місяців з трьох букв, наприклад "янв", "июн", тоді ставим TRUE.
         localDate = new Date();
 
-    switch(countryName) {
-        case 'it':  // Italy
+    switch (countryName) {
+        case 'it': // Italy
             months = ['Gennaio', 'Febbraio', 'Marzo', 'Aprile', 'Maggio', 'Giugno', 'Luglio', 'Agosto', 'Settembre', 'Ottobre', 'Novembre', 'Dicembre'];
             break;
-        case 'es':  // Spain
+        case 'es': // Spain
             months = ['Enero', 'Febrero', 'Marzo', 'Abril', 'Mayo', 'Junio', 'Julio', 'Agosto', 'Septiembre', 'Octubre', 'Noviembre', 'Diciembre'];
             break;
-        case 'fr':  // France
+        case 'fr': // France
             months = ['Janvier', 'Février', 'Mars', 'Avril', 'Mai', 'Juin', 'Juillet', 'Août', 'Septembre', 'Octobre', 'Novembre', 'Décembre'];
             break;
-        case 'pt':  // Portugal
+        case 'pt': // Portugal
             months = ['Janeiro', 'Fevereiro', 'Março', 'Abril', 'Maio', 'Junho', 'Julho', 'Agosto', 'Setembro', 'Outubro', 'Novembro', 'Dezembro'];
             break;
-        case 'de':  // Germany
+        case 'de': // Germany
             months = ['Januar', 'Februar', 'März', 'April', 'Mai', 'Juni', 'Juli', 'August', 'September', 'Oktober', 'November', 'Dezember'];
             break;
-        case 'bg':  // Bulgaria
+        case 'bg': // Bulgaria
             months = ['Януари', 'Февруари', 'Март', 'Април', 'Май', 'Юни', 'Юли', 'Август', 'Септември', 'Октомври', 'Ноември', 'Декември'];
             break;
-        case 'pl':  // Poland
+        case 'pl': // Poland
             months = ['Styczeń', 'Luty', 'Marzec', 'Kwiecień', 'Maj', 'Czerwiec', 'Lipiec', 'Sierpień', 'Wrzesień', 'Październik', 'Listopad', 'Grudzień'];
             break;
-        case 'ro':  // Romania
+        case 'ro': // Romania
             months = ['Ianuarie', 'Februarie', 'Martie', 'Aprilie', 'Mai', 'Iunie', 'Iulie', 'August', 'Septembrie', 'Octombrie', 'Noiembrie', 'Decembrie'];
             break;
-        case 'hu':  // Hungary (Румунія)
+        case 'hu': // Hungary (Румунія)
             months = ['Január', 'Február', 'Március', 'Április', 'Május', 'Június', 'Július', 'Augusztus', 'Szeptember', 'Október', 'November', 'December'];
             break;
-        case 'gr':  // Greece
-        case 'cy':  // Cyprus (Кіпр)
+        case 'gr': // Greece
+        case 'cy': // Cyprus (Кіпр)
             months = ['Ιανουάριος', 'Φεβρουάριος', 'Μάρτιος', 'Απρίλιος', 'Μάιος', 'Ιούνιος', 'Ιούλιος', 'Αύγουστος', 'Σεπτέμβριος', 'Οκτώβριος', 'Νοέμβριος', 'Δεκέμβριος'];
             break;
-        case 'ru':  // Russia
+        case 'ru': // Russia
             months = ['Января', 'Февраля', 'Марта', 'Апреля', 'Мая', 'Июня', 'Июля', 'Августа', 'Сентября', 'Октября', 'Ноября', 'Декабря'];
             break;
     }
 
     if (isAbbreviated) {
         for (var i = 0; i < months.length; i++) {
-            months[i] = months[i].slice(0, 3).toLowerCase();  // Прибираємо ".toLowerCase()", якщо перша буква повинна бути великою.
+            months[i] = months[i].slice(0, 3).toLowerCase(); // Прибираємо ".toLowerCase()", якщо перша буква повинна бути великою.
         }
     }
 
@@ -71,11 +71,11 @@ function postDate(sa, countryName, isAbbreviated) {
             nodeList = document.getElementsByClassName(dateClass),
             date = new Date(localDate.getTime() - counter * msInDay),
             timeCounter = 0,
-            timeArray = time(nodeList/*, true*/); // Розкоментувати, якщо необхідне сортування в порядку спадання.
+            timeArray = time(nodeList /*, true*/ ); // Розкоментувати, якщо необхідне сортування в порядку спадання.
 
         timeArray = timeFormat(timeArray);
 
-        for(var i = 0; i < nodeList.length; i++) {
+        for (var i = 0; i < nodeList.length; i++) {
             var data = nodeList[i].dataset;
 
             if (data.format) {
@@ -105,13 +105,13 @@ function postDate(sa, countryName, isAbbreviated) {
             date = new Date(localDate.getTime() + counter * msInDay),
             timeCounter = 0;
 
-        for(var i = 0; i < nodeList.length; i++) {
+        for (var i = 0; i < nodeList.length; i++) {
             var data = nodeList[i].dataset;
 
             if (data.format) {
                 nodeList[i].innerHTML = format(date, data.format);
             } else {
-                nodeList[i].innerHTML = format(date/*, "dd month yyyy"*/);
+                nodeList[i].innerHTML = format(date /*, "dd month yyyy"*/ );
             }
         }
     }
@@ -119,7 +119,8 @@ function postDate(sa, countryName, isAbbreviated) {
 
 
     function time(nodeList, reverse) {
-        var timeArray = [], timeStatement = false;
+        var timeArray = [],
+            timeStatement = false;
 
         for (var i = 0; i < nodeList.length; i++) {
             if (nodeList[i].className.match(/\btime\b/)) {
@@ -130,8 +131,12 @@ function postDate(sa, countryName, isAbbreviated) {
             }
         }
 
-        if (reverse) timeArray.sort(function(a, b) { return b - a; });
-        else timeArray.sort(function(a, b) { return a - b; });
+        if (reverse) timeArray.sort(function (a, b) {
+            return b - a;
+        });
+        else timeArray.sort(function (a, b) {
+            return a - b;
+        });
 
         return timeArray;
     }
@@ -150,7 +155,8 @@ function postDate(sa, countryName, isAbbreviated) {
         var array = [];
 
         for (var i = 0; i < timearray.length; i++) {
-            var htemp = Math.floor(timearray[i] / 60), mtemp = timearray[i] % 60,
+            var htemp = Math.floor(timearray[i] / 60),
+                mtemp = timearray[i] % 60,
                 hours = htemp < 10 ? "0" + htemp : htemp,
                 minutes = mtemp < 10 ? "0" + mtemp : mtemp;
             array.push(hours + ":" + minutes);
@@ -247,9 +253,77 @@ function postDate(sa, countryName, isAbbreviated) {
 }
 
 
-
 $(".open-info").click(function(e){
     // e.preventDefault();
     var block = $(this).parents(".wrong-treatment-wrap__item");
     block.toggleClass("active").siblings().removeClass("active");
 })
+function youtubeShowVideo() {
+    var i, c, y, v, n;
+    v = document.getElementsByClassName("youtube");
+    for (n = 0; n < v.length; n++) {
+        y = v[n];
+        i = document.createElement("img");
+        i.setAttribute("src", "http://i.ytimg.com/vi/" + y.id + "/hqdefault.jpg");
+        i.setAttribute("class", "thumb");
+        c = document.createElement("div");
+        c.setAttribute("class", "play");
+        y.appendChild(i);
+        y.appendChild(c);
+        y.onclick = function () {
+            var a = document.createElement("iframe");
+            a.setAttribute("src", "https://www.youtube.com/embed/" + this.id + "?autoplay=1&autohide=1&border=0&wmode=opaque&enablejsapi=1");
+            a.style.width = this.style.width;
+            a.style.height = this.style.height;
+            this.parentNode.replaceChild(a, this)
+        }
+    }
+}
+youtubeShowVideo();
+
+
+$(document).ready(function () {
+  $('.joint__slide').slick({
+    slidesToShow: 3,
+    variableWidth: true,
+    responsive: [
+      {
+        breakpoint: 1024,
+        settings: {
+          slidesToShow: 2,
+          slidesToScroll: 1
+        }
+      }, 
+      {
+        breakpoint: 768,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1 
+        }
+      }
+    ]
+  });
+
+    $('.components__slider').slick({
+        infinity: true,
+        slidesToShow: 3,
+        slidesToScroll: 1,
+        responsive: [
+            {
+                breakpoint: 1024,
+                settings: {
+                    slidesToShow: 2,
+                    slidesToScroll: 1,
+                    infinite: true
+                }
+            },
+            {
+                breakpoint: 640,
+                settings: {
+                    slidesToShow: 1,
+                    slidesToScroll: 1
+                }
+            }
+        ]
+    });
+});

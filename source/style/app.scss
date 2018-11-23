@@ -62,6 +62,7 @@ input::-ms-clear {
   color: #2b3541;
   font-weight: 500;
   text-align: center;
+  font-weight: bold;
 }
 .text__green {
   color: #779a0b;
@@ -324,6 +325,62 @@ input::-ms-clear {
 :-moz-placeholder           { color: #bdc3ca; font-weight: 400; font-size: 16px; } /* Firefox 18- */
 :-ms-input-placeholder      { color: #bdc3ca; font-weight: 400; font-size: 16px; }
 
+.youtube {
+  background-color: #000;
+  max-width: 100%;
+  overflow: hidden;
+  position: relative;
+  cursor: hand;
+  cursor: pointer
+}
+
+.youtube .thumb {
+  bottom: 0;
+  display: block;
+  left: 0;
+  margin: auto;
+  max-width: 100%;
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 100%;
+  height: auto
+}
+
+.youtube .play {
+  filter: alpha(opacity=80);
+  opacity: .8;
+  height: 70px;
+  left: 50%;
+  margin-left: -38px;
+  margin-top: -38px;
+  position: absolute;
+  top: 50%;
+  width: 70px;
+  border-radius: 50%;
+}
+
+.video__name {
+  font-family: Arial, sans-serif;
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+
+.youtube .play {
+  background-image: url('../img/button-play.svg');
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+}
+
+.video-wrap iframe {
+  border: none;
+}
+
+::-webkit-input-placeholder { color: #666; font-weight: 400; }
+::-moz-placeholder          { color: #666; font-weight: 400; } /* Firefox 19+ */
+:-moz-placeholder           { color: #666; font-weight: 400; } /* Firefox 18- */
+:-ms-input-placeholder      { color: #666; font-weight: 400; }
+
 
 
 
@@ -345,7 +402,6 @@ input::-ms-clear {
 @import "common/delivery.scss";
 @import "common/footer.scss";
 @import "common/popup.scss";
-
 
 @media screen and (max-width: 1199px){
   .section {
