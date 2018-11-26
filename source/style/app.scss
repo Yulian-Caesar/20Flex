@@ -49,11 +49,21 @@ input {
   padding: 80px 0;
 }
 
-.section-grey {
-  // background-color: #e8f4f9;
-  background: url(../img/grey-bg.png);
-  background-size: cover;
+// .section-grey {
+//   background-color: #e8f4f9;
+// }
+
+@mixin bgImage($dir, $offset) {
+  background-image: url(../img/cloud-normal.png), url(../img/grey-bg.png);
+  background-repeat: no-repeat;
+  background-size: auto, cover;
+  @if ($dir == 'top') {
+    background-position: top $offset center, center;
+  } @else if ($dir == 'bottom') {
+    background-position: bottom $offset center, center;
+  }
 }
+
 
 input::-ms-clear {
   display: none;
