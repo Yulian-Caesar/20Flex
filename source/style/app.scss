@@ -50,7 +50,9 @@ input {
 }
 
 .section-grey {
-  background-color: #e8f4f9;
+  // background-color: #e8f4f9;
+  background: url(../img/grey-bg.png);
+  background-size: cover;
 }
 
 input::-ms-clear {
@@ -93,6 +95,9 @@ input::-ms-clear {
   &-black {
     font-weight: 900;
   }
+}
+.italic {
+  font-style: italic;
 }
 
 .form {
