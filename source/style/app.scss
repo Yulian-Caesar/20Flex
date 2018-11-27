@@ -53,6 +53,10 @@ input {
 //   background-color: #e8f4f9;
 // }
 
+.form-arrow{
+  fill: #9bc1cc;
+}
+
 @mixin bgImage($dir, $offset) {
   background-image: url(../img/cloud-normal.png), url(../img/grey-bg.png);
   background-repeat: no-repeat;
@@ -242,6 +246,10 @@ input::-ms-clear {
   padding: 20px 25px 20px 55px;
   border-radius: 30px;
   border: 1px solid #dfdfdf;
+  &:hover,
+  &:focus {
+    box-shadow: 0 0 10px rgba(0,0,0,0.5);
+  }
 }
 .input-box {
   position: relative;
@@ -326,11 +334,11 @@ input::-ms-clear {
   }
   & .btn__text-1 {
     font-weight: 700;
-    font-size: 28px;
+    font-size: 30px;
     line-height: 28px;
   }
   & .btn__text-2 {
-    font-size: 17px;
+    font-size: 16px;
     line-height: 15px;
   }
 }
@@ -391,7 +399,7 @@ input::-ms-clear {
   border: none;
 }
 
-.pillow-box,
+.pill-box,
 .capsule-box {
   display: flex;
   justify-content: center;
