@@ -253,11 +253,12 @@ function postDate(sa, countryName, isAbbreviated) {
 }
 
 
-$(".open-info").click(function(e){
+$(".open-info").click(function (e) {
     // e.preventDefault();
     var block = $(this).parents(".wrong-treatment-wrap__item");
     block.toggleClass("active").siblings().removeClass("active");
 })
+
 function youtubeShowVideo() {
     var i, c, y, v, n;
     v = document.getElementsByClassName("youtube");
@@ -286,44 +287,80 @@ $(document).ready(function () {
   $('.joint__slide').slick({
     slidesToShow: 3,
     variableWidth: true,
-    responsive: [
-      {
-        breakpoint: 1024,
-        settings: {
-          slidesToShow: 2,
-          slidesToScroll: 1
-        }
-      }, 
-      {
-        breakpoint: 768,
-        settings: {
-          slidesToShow: 1,
-          slidesToScroll: 1 
-        }
+    responsive: [{
+      breakpoint: 1024,
+      settings: {
+        slidesToShow: 2,
+        slidesToScroll: 1
       }
+    },
+    {
+      breakpoint: 768,
+      settings: {
+        slidesToShow: 1,
+        slidesToScroll: 1
+      }
+    }
     ]
 });
+    
 
-$('.effective__slide').slick({
-    slidesToShow: 3,
-    variableWidth: true,
-    responsive: [
-      {
-        breakpoint: 1024,
-        settings: {
-          slidesToShow: 2,
-          slidesToScroll: 1
-        }
-      }, 
-      {
-        breakpoint: 768,
-        settings: {
-          slidesToShow: 1,
-          slidesToScroll: 1 
-        }
-      }
-    ]
-});
+
+let slider1 = $('.effective__slide');
+
+
+function initSlider(slider, options) {
+  slider.on('init', function () {
+    setTimeout(function () {
+      slider.addClass('is-ready');
+    }, 100);
+  });
+  slider.not('.slick-initialized').slick(options);
+}
+
+
+function destroySlider(slider) {
+  if (slider.hasClass('slick-initialized')) {
+    slider.slick('unslick');
+  }
+}
+
+
+function showSlider() {
+  var tablet = ($(window).width()) < 1023;
+  if (tablet) {
+    initSlider(slider1, {
+        responsive: [{
+            breakpoint: 1024,
+            settings: {
+              slidesToShow: 2,
+              
+              slidesToScroll: 1
+            }
+          },
+          {
+            breakpoint: 768,
+            settings: {
+              slidesToShow: 1,
+              
+              slidesToScroll: 1
+            }
+          }
+        ]
+    });
+  } else {
+    destroySlider(slider1);
+  }
+};
+showSlider();
+$(window).on('resize', showSlider);
+
+
+
+
+
+
+
 
     $('.reviews__slider').slick({
         infinity: true,
@@ -334,8 +371,7 @@ $('.effective__slide').slick({
         arrow: true,
         nextArrow: $('.reviews__next'),
         prevArrow: $('.reviews__prev'),
-        responsive: [
-            {
+        responsive: [{
                 breakpoint: 1024,
                 settings: {
                     slidesToShow: 2,
