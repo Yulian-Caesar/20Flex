@@ -1,4 +1,5 @@
 .demonstration{
+    @include bgImage(top, 200px);
     &__wrapper{
         display: flex;
         justify-content: flex-end;
@@ -27,7 +28,7 @@
                 left: 100px;
             }
         }
-        &-youtube{
+        &-youtube {
             width: 100%;
             height: 248px;
             margin-top: 73px;
@@ -65,6 +66,12 @@
     }
 }
 
+iframe {
+    width: 468px;
+    height: 248px;
+    margin-top: 70px;
+}
+
 @media screen and (max-width: 1199px){
     .demonstration__video{
         top: 0;
@@ -81,6 +88,10 @@
     }
 }
 @media screen and (max-width: 1023px){
+    .demonstration{
+        background-color: #e8f4f9;
+        background-image: none;
+    }
     .demonstration__wrapper{
         display: flex;
         flex-direction: column-reverse;
@@ -100,6 +111,9 @@
     .demonstration__description-text{
         margin-left: 0;
         font-size: 17px;
+    }
+    iframe{
+        margin-top: 30px;
     }
 }
 
@@ -137,6 +151,9 @@
         left: 200px;
     }
     .demonstration__video-youtube{
+        width: 100%;
+    }
+    iframe{
         width: 100%;
     }
 }
