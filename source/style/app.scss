@@ -393,6 +393,16 @@ input::-ms-clear {
   background-color: #e8eef3;
   box-shadow: -5px 9px 32px rgba(183, 191, 194, 0.25);
 }
+@mixin bgImage($dir, $offset) {
+  background-image: url(../img/cloud-normal.png), url(../img/grey-bg.png);
+  background-repeat: no-repeat;
+  background-size: auto, cover;
+  @if ($dir == 'top') {
+    background-position: top $offset center, center;
+  } @else if ($dir == 'bottom') {
+    background-position: bottom $offset center, center;
+  }
+}
 
 @import "common/slick.scss";
 @import "common/slick-theme.scss";

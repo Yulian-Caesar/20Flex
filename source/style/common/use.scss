@@ -1,0 +1,286 @@
+.use {
+  @include bgImage(top, 305px);
+  &__content {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding-left: 60px;
+    margin-top: 81px;
+  }
+  &__gel,
+  &__tabl {
+    width: 510px;
+    padding: 40px 20px 20px 20px;
+    background-color: #fff;
+    position: relative;
+  }
+  &__logo {
+    position: absolute;
+    left: 162px;
+    top: -21px;
+  }
+  &__product {
+    position: absolute;
+    &--orange {
+      width: 205px;
+      top: 32px;
+      left: -62px;
+    }
+    &--blue {
+      width: 124px;
+      top: -12px;
+      left: -16px;
+    }
+    &--pills {
+      width: 85px;
+      top: 183px;
+      left: 47px;
+    }
+  }
+  &__top {
+    padding-left: 140px;
+  }
+  &__desc {
+    font-size: 28px;
+    font-weight: 500;
+    line-height: 34px;
+    &--orange {
+      color: #f57d02;
+    }
+    &--blue {
+      color: #4699b9;
+    }
+  }
+  &__list {
+    margin-top: 15px;
+    min-height: 84px;
+  }
+  &__item {
+    color: #656d76;
+    font-size: 17px;
+    font-weight: 400;
+    line-height: 28px;
+  }
+  &__repeat {
+    margin-top: 49px;
+    margin-bottom: 20px;
+    color: #2b3541;
+    font-size: 16px;
+    font-style: italic;
+    line-height: 32px;
+    position: relative;
+    text-align: center;
+  }
+  &__line {
+    position: absolute;
+    top: 18px;
+    left: -76px;
+    width: 110px;
+    height: 110px;
+    transform: scale(1, -1) rotate(-29deg);
+  }
+  &__youtube {
+    width: 470px;
+    height: 270px;
+  }
+  & iframe {
+    width: 470px;
+    height: 270px;
+  }
+  &__efect {
+    width: 100%;
+    margin-top: 44px;
+  }
+  &__subtitle {
+    text-align: center;
+    color: #2b3541;
+    font-size: 28px;
+    font-weight: 500;
+    line-height: 30px;
+  }
+  &__efects {
+    margin-top: 48px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+  }
+  &__pic {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    width: 70px;
+    height: 70px;
+    background-color: #ffffff;
+    border-radius: 50%;
+  }
+  &__itm {
+    width: 370px;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 26px;
+    color: #656d76;
+    &--text {
+      width: calc(100% - 95px);
+    }
+    &--bold {
+      font-weight: 700;
+      color: #2b3541;
+    }
+  }
+}
+
+@media screen and (max-width: 1199px) {
+  .use {
+    &__content {
+      margin-top: 50px;
+    }
+    &__gel,
+    &__tabl {
+      width: 440px;
+    }
+    &__top {
+      padding-left: 100px;
+    }
+    &__logo {
+      left: 50%;
+      transform: translateX(-50%);
+    }
+    &__item {
+      font-size: 16px;
+    }
+    &__product {
+      &--orange {
+        width: 165px;
+      }
+      &--blue {
+        width: 94px;
+      }
+      &--pills {
+        width: 65px;
+        top: 140px;
+      }
+    }
+    &__repeat {
+      margin-top: 20px;
+    }
+    &__youtube {
+      width: 100%;
+      height: 240px;
+    }
+    & iframe {
+      width: 100%;
+      height: 240px;
+    }
+    &__pic {
+      width: 50px;
+      height: 50px;
+      & img {
+        width: 60%;
+      }
+    }
+    &__itm {
+      width: 320px;
+      font-size: 17px;
+      & br {
+        display: none;
+      }
+      &--text {
+        width: calc(100% - 65px);
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 1023px) {
+  .use {
+    &__content {
+      flex-direction: column;
+      align-items: center;
+      padding-left: 0;
+    }
+    &__tabl {
+      margin-top: 50px;
+    }
+    &__efects {
+      margin-top: 0;
+      flex-wrap: wrap;
+      justify-content: space-around;
+    }
+    &__itm {
+      margin-top: 30px;
+      width: 45%;
+    }
+  }
+}
+
+
+@media screen and (max-width: 639px) {
+  .use {
+    &__efects {
+      flex-direction: column;
+      align-items: center;
+    }
+    &__line {
+      display: none;
+    }
+    &__itm {
+      width: 100%;
+    }
+    &__product {
+      &--blue {
+        position: static;
+        display: block;
+        margin-right: auto;
+        margin-left: auto;
+        margin-bottom: 30px;
+      }
+      &--pills {
+        left: calc(50%);
+        top: 190px;
+
+      }
+      &--orange {
+        display: block;
+        position: static;
+        margin-right: auto;
+        margin-left: auto;
+        margin-bottom: 20px;
+      }
+    }
+    &__list {
+      min-height: auto;
+    }
+    &__top {
+      padding-left: 0;
+      text-align: center;
+    }
+  }
+}
+
+@media screen and (max-width: 479px) {
+  .use {
+    &__gel,
+    &__tabl {
+      width: 300px;
+      padding-right: 10px;
+      padding-left: 10px;
+    }
+    &__item {
+      font-size: 15px;
+      line-height: 1.4;
+    }
+    &__itm {
+      font-size: 16px;
+    }
+    &__youtube {
+      height: 170px;
+    }
+    & iframe {
+      height: 170px;
+    }
+  }
+}
