@@ -1,0 +1,98 @@
+.returns-youth {
+	// background-image: url(../img/cloud-normal.png);
+	@include bgImage(top, 200px);
+	text-align: center;
+	&-title {
+		margin-bottom: 10px;
+	}
+	&__descr {
+		color: #2b3541;
+		font-size: 22px;
+		margin-bottom: 50px;
+	}
+	&-wrap {
+		display: -webkit-flex;
+		display: -moz-flex;
+		display: -ms-flex;
+		display: -o-flex;
+		display: flex;
+		justify-content: space-between;
+		margin-bottom: 75px;
+		&__item {
+			.title {
+				font-size: 32px;
+				display: -webkit-flex;
+				display: -moz-flex;
+				display: -ms-flex;
+				display: -o-flex;
+				display: flex;
+				align-items: center;
+				margin-bottom: 20px;
+				&-img {
+					margin: 0 20px 0 0;
+				}
+			}
+			.descr {
+				display: -webkit-flex;
+				display: -moz-flex;
+				display: -ms-flex;
+				display: -o-flex;
+				display: flex;
+				align-items: center;
+				margin-bottom: 20px;
+				font-style: italic;
+				font-size: 16px;
+			}
+			.pillow-box {
+				margin-left: 20px;
+			}
+			.capsule-box {
+				margin-right: 20px;
+			}
+			.text {
+				color: #656d76;
+				font-size: 18px;
+				.font-bold {
+					color: #2b3541;
+				}
+			}
+		}
+		&__left {
+			text-align: right;
+			width: calc(50% - 185px);
+			.title {
+				justify-content: flex-end;
+				&-img {
+					margin: 0 0 0 20px;
+				}
+			}
+			.descr {
+				justify-content: flex-end;
+			}
+		}
+		&__center {
+			margin: 0 30px;
+			img {
+				border-radius: 50%;
+				margin-bottom: 25px;
+			}
+			p {
+				color: #2b3541;
+				font-size: 17px;
+				font-style: italic;
+			}
+		}
+		&__right {
+			text-align: left;
+			width: calc(50% - 185px);
+		}
+	}
+	.advice-title {
+		color: #2b3541;
+		font-size: 28px;
+		margin-bottom: 40px;
+	}
+	&-btn {
+		margin: 0 auto;
+	}
+}

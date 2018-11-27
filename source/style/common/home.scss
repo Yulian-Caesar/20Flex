@@ -109,6 +109,7 @@
       border-radius: 50%;
       margin-right: 15px;
       text-align: center;
+      flex: none;
     }
     &__text {
       color: #2b3541;
@@ -131,6 +132,9 @@
       .biger {
         color: #2b3541;
       }
+    }
+    a {
+      flex: none;
     }
   }
   &-product {
@@ -175,17 +179,9 @@
         }
       }
     }
-    &__circle {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      width: 70px;
-      height: 70px;
-      border-radius: 50%;
-      border: 4px solid #ffffff;
-      background-color: #e8eef3;
+    .pillow-box,
+    .capsule-box {
       margin-right: 15px;
-      box-shadow: -5px 9px 32px rgba(183, 191, 194, 0.25);
     }
     &__text {
       font-size: 16px;
@@ -274,6 +270,7 @@
         flex-wrap: wrap;
         justify-content: center;
         text-align: center;
+        margin-bottom: 20px;
       }
     }
     &-product {
@@ -302,11 +299,98 @@
       }
     }
     &-list {
+      margin-bottom: 0;
       &__img {
         margin-right: 10px;
       }
       &__text {
         font-size: 18px;
+      }
+    }
+  }
+}
+@media screen and (max-width:767px) {
+  .header {
+    justify-content: center;
+    &-item {
+      padding: 0 20px;
+      &__link {
+        span {
+          display: none;
+        }
+      }
+    }
+  }
+  .home {
+    &-title {
+      font-size: 35px;
+    }
+    &-people {
+      display: none;
+    }
+    &-product {
+      bottom: 0;
+    }
+    &-watch {
+      margin: 15px 0;
+    }
+    &-product {
+      &__product1 {
+        width: 150px;
+        padding-top: 150px;
+        }
+      &__product2 {
+        width: 225px;
+      }
+    }
+  }
+}
+@media screen and (max-width:639px) {
+  .home {
+    &-product {
+      margin: 0 auto 60px;
+      &__product1 {
+        width: 190px;
+        padding-top: 0;
+        }
+      &__product2 {
+        width: 300px;
+      }
+    }
+    &-wrap {
+      &__form {
+        margin: 0 auto;
+      }
+    }
+  }
+}
+@media screen and (max-width:479px) {
+  .home {
+    &-title {
+      font-size: 30px;
+    }
+    &-product {
+      &__product1 {
+        width: 145px;
+        }
+      &__product2 {
+        width: 220px;
+      }
+    }
+    &-watch {
+      flex-direction: column;
+      &__text {
+        margin-left: 0;
+        text-align: center;
+      }
+    }
+    &-list {
+      &__img {
+        margin-right: 5px;
+      }
+      &__text {
+        font-size: 16px;
+        letter-spacing: -0.7px;
       }
     }
   }
