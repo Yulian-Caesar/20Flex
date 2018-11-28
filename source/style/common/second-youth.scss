@@ -1,4 +1,5 @@
 .second-youth {
+  @include bgImage(top, 148px);
 
   &__content {
     width: 100%;

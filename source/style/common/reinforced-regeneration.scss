@@ -191,19 +191,25 @@
   &__pack-1 {
     position: relative;
     z-index: 1;
-    width: 166px;
-    margin-left: -10px;
+    width: 135px;
+    margin-left: -71px;
   }
   &__pack-2 {
     position: relative;
     z-index: 1;
     width: 250px;
-    margin-bottom: -21px;
+    margin-bottom: -41px;
     margin-left: -49px;
+  }
+  &__pack-3 {
+    position: relative;
+    z-index: 3;
+    width: 95px;
+    margin-bottom: -20px;
   }
   &__btn {
     width: 226px;
-    margin-top: 64px;
+    margin-top: 83px;
     margin-right: auto;
     margin-left: auto;
   }
@@ -348,7 +354,7 @@
     }
     &__pack-1 {
       width: 136px;
-      margin-left: 0;
+      margin-left: -75px;
     }
     &__pack-2 {
       width: 190px;
