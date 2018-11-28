@@ -60,7 +60,7 @@ input {
 @mixin bgImage($dir, $offset) {
   background-image: url(../img/cloud-normal.png), url(../img/grey-bg.png);
   background-repeat: no-repeat;
-  background-size: auto, cover;
+  background-size: auto, 2560px 100%;
   @if ($dir == 'top') {
     background-position: top $offset center, center;
   } @else if ($dir == 'bottom') {

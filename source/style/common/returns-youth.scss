@@ -157,6 +157,7 @@
 }
 @media screen and (max-width: 1023px) {
 	.returns-youth {
+		background: #e8f4f9;
 		&__descr {
 			font-size: 19px;
 			line-height: 1;
@@ -259,6 +260,11 @@
 				}
 				.descr {
 					justify-content: center;
+				}
+			}
+			&__item {
+				.title {
+					font-size: 30px;
 				}
 			}
 		}
