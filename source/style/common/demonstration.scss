@@ -66,10 +66,11 @@
     }
 }
 
-iframe {
+.demonstration__video iframe {
     width: 468px;
     height: 248px;
     margin-top: 70px;
+    border: none !important;
 }
 
 @media screen and (max-width: 1199px){
