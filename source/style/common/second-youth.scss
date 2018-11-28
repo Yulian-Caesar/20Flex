@@ -1,6 +1,6 @@
 .second-youth {
   @include bgImage(top, 148px);
-
+  padding: 110px 0 140px;
   &__content {
     width: 100%;
     display: flex;

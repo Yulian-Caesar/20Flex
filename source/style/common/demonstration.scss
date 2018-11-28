@@ -1,4 +1,5 @@
 .demonstration{
+    padding: 90px 0 105px;
     @include bgImage(top, 200px);
     &__wrapper{
         display: flex;
