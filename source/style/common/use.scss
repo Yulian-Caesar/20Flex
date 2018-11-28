@@ -1,4 +1,6 @@
 .use {
+  padding-top: 115px;
+  padding-bottom: 110px;
   @include bgImage(top, 305px);
   &__content {
     width: 100%;
