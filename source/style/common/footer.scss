@@ -30,6 +30,11 @@
 		margin-right: 18px;
 	}
 }
+@media screen and (min-width: 1024px) and (max-width: 1199px) {
+	.footer {
+	  padding: 0px 0 20px !important;
+	}
+}
 @media screen and (max-width: 1023px) {
 	.footer {
 		&-logo {
@@ -39,6 +44,7 @@
 }
 @media screen and (max-width: 767px) {
 	.footer {
+		padding: 20px 0 !important;
 		line-height: 1;
 		&-wrap {
 			flex-direction: column;

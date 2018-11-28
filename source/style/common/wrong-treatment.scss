@@ -139,7 +139,11 @@
 		display: none;
 	}
 }
-
+@media screen and (min-width: 1024px) and (max-width: 1199px) {
+    .wrong-treatment {
+        padding: 30px 0 40px !important;
+    }
+}
 @media screen and (max-width:1199px) {
 	.wrong-treatment {
 		&-wrap {
@@ -306,5 +310,10 @@
 				font-size: 24px;
 			}
 		}
+	}
+}
+@media screen and (max-width:479px) {
+	.wrong-treatment__warning:before {
+		display: none;
 	}
 } 

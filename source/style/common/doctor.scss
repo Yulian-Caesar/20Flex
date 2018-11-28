@@ -121,7 +121,11 @@
         color: #f0c69b;
     }
 }
-
+@media screen and (min-width: 1024px) and (max-width: 1199px) {
+    .doctor {
+        padding: 20px 0 0 !important;
+    }
+}
 @media screen and (max-width: 1199px){
     .doctor__img{
         width: 445px;
