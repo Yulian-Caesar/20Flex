@@ -3,7 +3,7 @@
 	@include bgImage(top, 200px);
 	text-align: center;
 	&-title {
-		margin-bottom: 10px;
+		margin-bottom: 5px;
 	}
 	&__descr {
 		color: #2b3541;
@@ -19,6 +19,7 @@
 		justify-content: space-between;
 		margin-bottom: 75px;
 		&__item {
+			position: relative;
 			.title {
 				font-size: 32px;
 				display: -webkit-flex;
@@ -27,9 +28,9 @@
 				display: -o-flex;
 				display: flex;
 				align-items: center;
-				margin-bottom: 20px;
+				margin-bottom: 27px;
 				&-img {
-					margin: 0 20px 0 0;
+					margin: 0 17px 0 0;
 				}
 			}
 			.descr {
@@ -43,7 +44,7 @@
 				font-style: italic;
 				font-size: 16px;
 			}
-			.pillow-box {
+			.pill-box {
 				margin-left: 20px;
 			}
 			.capsule-box {
@@ -52,6 +53,7 @@
 			.text {
 				color: #656d76;
 				font-size: 18px;
+				line-height: 26px;
 				.font-bold {
 					color: #2b3541;
 				}
@@ -63,18 +65,30 @@
 			.title {
 				justify-content: flex-end;
 				&-img {
-					margin: 0 0 0 20px;
+					margin: 0 0 0 17px;
 				}
 			}
 			.descr {
 				justify-content: flex-end;
 			}
+			.returns-youth-box__arrow {
+				transform: scale(1, -1);
+				left: inherit;
+				bottom: -85px;
+				right: -22px;
+			}
+			.returns-youth__arrow {
+				fill: #26b2d1;
+				transform: rotate(60deg);
+			}
 		}
 		&__center {
 			margin: 0 30px;
+			flex: none;
+			padding-top: 15px;
 			img {
 				border-radius: 50%;
-				margin-bottom: 25px;
+				margin-bottom: 22px;
 			}
 			p {
 				color: #2b3541;
@@ -87,12 +101,175 @@
 			width: calc(50% - 185px);
 		}
 	}
+	&-box__arrow {
+		position: absolute;
+		bottom: -90px;
+		left: -24px;
+	}
+	&__arrow {
+		fill: #f57d02;
+		width: 153px;
+		height: 300px;
+		transform: rotate(-120deg);
+	}
 	.advice-title {
 		color: #2b3541;
 		font-size: 28px;
+		line-height: 30px;
 		margin-bottom: 40px;
 	}
 	&-btn {
 		margin: 0 auto;
 	}
+}
+
+@media screen and (max-width: 1199px) {
+	.returns-youth {
+		&-wrap {
+			&__item {
+				.text {
+					font-size: 16px;
+				}
+			}
+			&__left {
+				.returns-youth-box__arrow {
+					bottom: -125px;
+					right: 0px;
+				}
+			}
+			&__left,
+			&__right {
+				width: calc(50% - 155px);
+			}
+			&__center {
+				margin: 0 15px;
+				width: 310px;
+			}
+		}
+		&-box__arrow {
+			bottom: -130px;
+			left: 2px;
+		}
+		&__arrow {
+			transform: rotate(240deg);
+		}
+	} 
+}
+@media screen and (max-width: 1023px) {
+	.returns-youth {
+		background: #e8f4f9;
+		&__descr {
+			font-size: 19px;
+			line-height: 1;
+			margin-bottom: 30px;
+		}
+		&-wrap {
+			flex-wrap: wrap;
+			justify-content: center;
+			margin: 0 -10px 20px;
+			&__item {
+				.title {
+					margin-bottom: 20px;
+				}
+			}
+			&__left {
+				.returns-youth-box__arrow {
+					bottom: -262px;
+					right: 150px;
+				}
+				.returns-youth__arrow {
+					transform: rotate(-5deg);
+				}
+			}
+			&__left,
+			&__right {
+				width: 50%;
+				padding: 0 10px;
+			}
+			&__center {
+				order: 3;
+				img {
+					margin-bottom: 10px;
+				}
+			}
+		}
+		&-box__arrow {
+			bottom: -268px;
+			left: 152px;
+		}
+		&__arrow {
+			transform: rotate(-185deg);
+		}
+		.advice-title {
+			font-size: 24px;
+			line-height: 1;
+			margin-bottom: 20px;
+		}
+	} 
+}
+
+@media screen and (max-width: 767px) {
+	.returns-youth {
+		.returns-youth-title {
+			font-size: 24px;
+		}
+		&-wrap {
+			margin: 0;
+			&__left,
+			&__right {
+				padding: 0;
+				width: 100%;
+				// text-align: center;
+				.title {
+					// justify-content: center;
+				}
+				.descr {
+					// justify-content: center;
+				}
+			}
+			&__right {
+				margin-bottom: 20px;
+			}
+			&__center {
+				order: 0;
+				padding: 0;
+				margin: 20px auto;
+				width: auto;
+				max-width: 100%;
+			}
+		}
+		&-box__arrow {
+			display: none;
+		}
+		.advice-title {
+			font-size: 18px;
+			br {
+				display: none;
+			}
+		}
+	}
+}
+@media screen and (max-width: 639px) {
+	.returns-youth {
+		&-wrap {
+			&__left,
+			&__right {
+				text-align: center;
+				.title {
+					justify-content: center;
+				}
+				.descr {
+					justify-content: center;
+				}
+			}
+			&__item {
+				.title {
+					font-size: 30px;
+				}
+			}
+		}
+	}
+}
+@media screen and (max-width: 479px) {
+
 }
