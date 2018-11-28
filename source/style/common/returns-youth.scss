@@ -1,5 +1,6 @@
 .returns-youth {
 	// background-image: url(../img/cloud-normal.png);
+	padding: 95px 0 120px;
 	@include bgImage(top, 200px);
 	text-align: center;
 	&-title {

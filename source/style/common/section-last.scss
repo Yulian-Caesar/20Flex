@@ -1,0 +1,16 @@
+.section-last {
+  padding: 85px 0 100px;
+  max-height: -webkit-fill-available;
+  position: relative;
+  &:before {
+    content: "";
+    background: url("../img/section-last__before.png") no-repeat center;
+    position: absolute;
+    top: -25px;
+    left: 0;
+    transform: scale(1,-1);
+    height: 80px;
+    width: 100%;
+    z-index:12;
+  }
+}
