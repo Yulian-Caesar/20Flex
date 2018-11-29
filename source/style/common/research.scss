@@ -1,6 +1,8 @@
 .research {
   padding: 120px 0 120px;
   text-align: center;
+  z-index: 10;
+  position: relative;
   @include bgImage(bottom, 160px);
   &__subtitle {
     margin-top: 15px;

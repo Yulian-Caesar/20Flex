@@ -1,6 +1,6 @@
 
 .doctor{
-    padding: 70px 0 0;
+    padding: 70px 0 108px;
     &__wrapper{
         display: flex;
         flex-direction: column;
@@ -19,13 +19,16 @@
     &__content{
         width: 100%;
         display: flex;
-        justify-content: space-between;
+        justify-content: flex-end;
         margin-top: 21px;
+        position: relative;
     }
     &__img{
         width: 558px;
-        position: relative;
-        z-index: 5;
+        position: absolute;
+        z-index: 0;
+        left: -80px;
+        top: 20px;
         &::before{
             content: '';
             width: 518px;
@@ -76,6 +79,16 @@
                 left: 0;
                 z-index: -1;
             }
+            &::after{
+                content: '“';
+                font-size: 100px;
+                font-family: 'PT Serif', serif;
+                position: absolute;
+                color: #4699b9;
+                transform: rotate(180deg);
+                bottom: -36px;
+                right: 60px;
+            }
         }
     }
     &__scroll{
@@ -121,20 +134,18 @@
         color: #f0c69b;
     }
 }
-@media screen and (min-width: 1024px) and (max-width: 1199px) {
-    .doctor {
-        padding: 20px 0 0 !important;
-    }
-}
+
 @media screen and (max-width: 1199px){
     .doctor__img{
         width: 445px;
     }
     .doctor__img{
-        width: 559px;
+        width: 509px;
+        left: -21px;   
     }
     .doctor__description{
         margin-top: 20px;
+        width: 530px;
     }
     .doctor__img::before{
         width: 448px;
@@ -142,22 +153,30 @@
         left: calc(50% - 224px);
         top: 124px;
     }
+    .doctor__scroll{
+        height: 231px;
+    }
 }
 @media screen and (max-width: 1023px){
+    .doctor{
+        padding-bottom: 0 !important;
+    }
     .doctor__content{
         flex-direction: column-reverse;
         align-items: center;
         justify-content: flex-start;
     }
     .doctor__scroll{
-        margin-top: 20px;
+        margin-top: 25px;
     }
     .doctor__description{
         margin-top: 0;
     }
     .doctor__img{
-        margin-top: 20px;
+        margin-top: -10px;
         width: 400px;
+        position: relative;
+        margin-bottom: -5px;
     }
 }
 
@@ -171,6 +190,9 @@
     .doctor__description-quote::before{
         height: 88%;
     }
+    .doctor__img{
+        margin-left: 35px;
+    }
 }
 @media screen and (max-width: 480px){
     .doctor__scroll-description{
@@ -179,7 +201,10 @@
     .doctor__img::before{
         display: none;
     }
-
+    .doctor__description-quote::after{
+        right: 0;
+        bottom: -54px;
+    }
 }
 @media screen and (max-width: 420px){
     .doctor__img{
