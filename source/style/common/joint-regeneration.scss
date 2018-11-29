@@ -95,7 +95,10 @@
             min-height: 100px;
         }
         &_center{
+            display: flex;
+            justify-content: center;
             align-items: center;
+            padding: 37px 14px;
         }
         &-img{
             width: 60px;
@@ -267,6 +270,9 @@
                 width: 554px;
             }
         }
+    }
+    .joint__item_center{
+        padding: 0 14px;
     }
 }
 
