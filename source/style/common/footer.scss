@@ -29,6 +29,11 @@
 		flex: none;
 		margin-right: 18px;
 	}
+	.privacy-link {
+		&:hover {
+			color: #f57d02;
+		}
+	}
 }
 @media screen and (min-width: 1024px) and (max-width: 1199px) {
 	.footer {

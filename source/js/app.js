@@ -2823,3 +2823,10 @@ Version: 3.1.5
 $('.doctor__scroll').mCustomScrollbar({
     axis: 'y'
 })
+$(document).on('click', 'a[href^="#"]', function (event) {
+    event.preventDefault();
+
+    $('html, body').animate({
+        scrollTop: $($.attr(this, 'href')).offset().top
+    }, 1000);
+});
