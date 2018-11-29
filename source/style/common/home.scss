@@ -231,7 +231,13 @@
     margin-left: -5px;
   }
 }
-
+@media screen and (min-width: 1024px) and (max-width: 1199px) {
+  .home {
+    &:after {
+      height: 60px;
+    }
+  }
+}
 @media screen and (max-width:1199px) {
   .header {
     padding-left: 0;
@@ -252,7 +258,7 @@
   .home {
     background: #e8f4f9;
     &.section {
-      padding: 20px 0 40px;
+      padding: 20px 0 120px;
     }
     &-people {
       display: none;
@@ -358,6 +364,9 @@
   }
   .home {
     max-height: fit-content;
+    &:after {
+      display: none;
+    }
     &-title {
       margin-bottom: 10px;
     }

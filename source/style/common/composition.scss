@@ -213,7 +213,11 @@
 		}
 	}
 }
-
+@media screen and (min-width: 1024px) and (max-width: 1199px) {
+    .composition {
+        padding: 80px 0 100px !important;
+    }
+}
 @media screen and (max-width:1199px) {
 	.composition {
 		&-info {

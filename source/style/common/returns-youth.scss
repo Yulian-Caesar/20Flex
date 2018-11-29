@@ -123,7 +123,11 @@
 		margin: 0 auto;
 	}
 }
-
+@media screen and (min-width: 1024px) and (max-width: 1199px) {
+    .returns-youth {
+        padding: 60px 0 80px !important;
+    }
+}
 @media screen and (max-width: 1199px) {
 	.returns-youth {
 		&-wrap {
