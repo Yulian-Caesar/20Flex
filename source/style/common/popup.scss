@@ -1,6 +1,7 @@
 
 .ever-popup {
 	background: rgba(232, 244, 249, 0.9) !important;
+	overflow-x: hidden !important;
 }
 
 .ever-popup__inner {
@@ -72,13 +73,9 @@
 			order: 2;
 			margin: 0 auto;
 			top: 0;
-			margin-top: 20px;
 		}
 		&-product {
-			position: relative;
-			left: 0;
-			top: 0;
-			bottom: inherit;
+			display: none;
 		}
 		&-product1 {
 			width: 150px;

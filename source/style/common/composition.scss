@@ -1,6 +1,6 @@
 .composition {
-	padding: 100px 0 120px;
-	@include bgImage(top, 700px);
+	padding: 123px 0 120px;
+	@include bgImage-composition(top, 750px);
 	.title {
 		margin-bottom: 59px;
 	}
@@ -101,6 +101,11 @@
 		display: flex;
 		position: relative;
 		margin-bottom: 45px;
+		&__pills {
+			position: absolute;
+			left: 110px;
+			bottom: 0;
+		}
 		&:before {
 			content: "";
 			position: absolute;
@@ -128,7 +133,9 @@
 			display: flex;
 			justify-content: center;
 			align-items: flex-end;
-			height: 390px;
+			height: 365px;
+			position: relative;
+			margin-bottom: 25px;
 		}
 		&__title {
 			display: -webkit-flex;
@@ -245,6 +252,10 @@
 					letter-spacing: -0.4px;
 				}
 			}
+			&__pills {
+        		left: 80px;
+        		bottom: -10px;
+        	}
 		}
 	}
 }
@@ -274,6 +285,10 @@
 			}
 		}
 		&-wrap {
+			&__pills {
+				left: -20px;
+				bottom: 0;
+			}
 			&__img {
 				max-width: 310px;
 				height: 325px;
@@ -316,6 +331,9 @@
 				font-size: 25px;
 				margin-bottom: 30px;
 			}
+			&__pills {
+				left: 15px;
+			}
 		}
 		&-product2 {
 			width: 280px;
@@ -340,6 +358,9 @@
 		}
 		&-wrap {
 			flex-wrap: wrap;
+			&__pills {
+				left: 0;
+			}
 			&:before {
 				display: none;
 			}
@@ -351,6 +372,7 @@
 			}
 			&__img {
 				height: auto;
+				margin-bottom: 20px;
 			}
 			.item {
 				flex-direction: inherit;

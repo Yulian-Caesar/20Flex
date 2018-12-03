@@ -10,7 +10,7 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  margin-bottom: 25px;
+  margin-bottom: 19px;
   &-item {
     display: -webkit-flex;
     display: -moz-flex;
@@ -27,13 +27,13 @@
     }
     &__link {
       font-size: 16px;
-      line-height: 18px;
+      line-height: 22px;
       color: #656d76;
-      span {
-        border-bottom: 1px dotted #000;
-        &:hover {
-          border-bottom: none;
-        }
+    }
+    &__text {
+      border-bottom: 2px dotted #656d76;
+      &:hover {
+        border-bottom: none;
       }
     }
   }
@@ -42,7 +42,7 @@
 .home {
   background: url("../img/home-bg.png")  no-repeat center;
   background-size: cover;
-  padding: 25px 0 120px;
+  padding: 20px 0 120px;
   max-height: 810px;
   position: relative;
   background-color: #e8f4f9;
@@ -231,6 +231,11 @@
     margin-left: -5px;
   }
 }
+@media screen and (max-width: 1349px) {
+  .form-arrow {
+    display: none;
+  }
+}
 @media screen and (min-width: 1024px) and (max-width: 1199px) {
   .home {
     &:after {
@@ -371,7 +376,7 @@
       margin-bottom: 10px;
     }
     &.section {
-      padding: 20px 0;
+      padding: 20px 0 45px;
     }
     &-descr {
       font-size: 21px;
@@ -436,13 +441,16 @@
     }
     &-list {
       margin-bottom: 20px;
+      display: inline-flex;
       &__item {
-        justify-content: center;
+        justify-content: flex-start;
       }
     }
     &-watch {
-      justify-content: center;
-      margin-bottom: 20px;
+      max-width: 392px;
+      text-align: center;
+      margin: 0 auto 20px;
+      justify-content: flex-start;
       &__text {
         text-align: left;
         .biger {
@@ -465,6 +473,9 @@
     }
   }
   .home {
+    &.section {
+      padding: 20px 0 35px;
+    }
     &-product {
       margin: 0;
       &__product2 {
@@ -497,6 +508,9 @@
     }
   }
   .home {
+    &.section {
+      padding: 20px 0 25px;
+    }
     &-wrap {
       &__form {
         margin: 0 auto;
@@ -558,6 +572,8 @@
       }
     }
     &-watch {
+      max-width: unset;
+      justify-content: center;
       &__play {
         width: 45px;
         height: 45px;
