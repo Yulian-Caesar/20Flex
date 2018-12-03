@@ -286,30 +286,27 @@ function youtubeShowVideo() {
 }
 youtubeShowVideo();
 
-
-$(document).ready(function () {
-  $('.joint__slide').slick({
-    slidesToShow: 3,
-    variableWidth: true,
-    responsive: [{
-      breakpoint: 1024,
-      settings: {
-        slidesToShow: 2,
-        slidesToScroll: 1
-      }
-    },
-    {
-      breakpoint: 768,
-      settings: {
-        slidesToShow: 1,
-        slidesToScroll: 1
-      }
-    }
-    ]
+$(document).ready(function (){
+	$('.joint__slide').slick({
+		slidesToShow: 3,
+    	variableWidth: true,
+    	responsive: [{
+      		breakpoint: 1024,
+      		settings: {
+        		slidesToShow: 2,
+        		slidesToScroll: 1
+      		}		
+    	},
+    	{
+      		breakpoint: 768,
+     		 settings: {
+        		slidesToShow: 1,
+        		slidesToScroll: 1
+      		}
+    }]
 });
-    
 
-
+  
 let slider1 = $('.effect__slider-wrapper');
 
 
@@ -322,20 +319,19 @@ function initSlider(slider, options) {
   slider.not('.slick-initialized').slick(options);
 }
 
-
 function destroySlider(slider) {
   if (slider.hasClass('slick-initialized')) {
     slider.slick('unslick');
   }
 }
 
-
 function showSlider() {
-  var tablet = ($(window).width()) < 1023;
+  var tablet = ($(window).width()) < 1024;
   if (tablet) {
     initSlider(slider1, {
         responsive: [{
-            breakpoint: 1024,
+			breakpoint: 1024,
+
             settings: {
               slidesToShow: 2,
               
@@ -360,6 +356,7 @@ showSlider();
 
 
 $(window).on('resize', showSlider);
+
     $('.reviews__slider').slick({
         infinity: true,
         slidesToShow: 3,

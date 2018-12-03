@@ -198,6 +198,9 @@
             position: absolute;
             bottom: -18px;
             left: calc(50% - 20px);
+            &_position{
+                bottom: -11px;
+            }
         }
     }
     &__bottom-title{
@@ -327,6 +330,9 @@
     }
     .effect__block_border{
         width: 100%;
+    }
+    .effect{
+        margin-top: 20px;
     }
 }
 @media screen and (max-width: 639px){
