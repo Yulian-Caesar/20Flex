@@ -79,7 +79,7 @@
 				right: -22px;
 			}
 			.returns-youth__arrow {
-				fill: #26b2d1;
+				fill: #26b2d1 !important;
 				transform: rotate(60deg);
 			}
 		}
@@ -108,7 +108,7 @@
 		left: -24px;
 	}
 	&__arrow {
-		fill: #f57d02;
+		fill: #f57d02 !important;
 		width: 153px;
 		height: 300px;
 		transform: rotate(-120deg);
