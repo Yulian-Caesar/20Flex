@@ -1,5 +1,6 @@
 .returns-youth {
 	// background-image: url(../img/cloud-normal.png);
+	padding: 95px 0 120px;
 	@include bgImage(top, 200px);
 	text-align: center;
 	&-title {
@@ -78,7 +79,7 @@
 				right: -22px;
 			}
 			.returns-youth__arrow {
-				fill: #26b2d1;
+				fill: #26b2d1 !important;
 				transform: rotate(60deg);
 			}
 		}
@@ -107,7 +108,7 @@
 		left: -24px;
 	}
 	&__arrow {
-		fill: #f57d02;
+		fill: #f57d02 !important;
 		width: 153px;
 		height: 300px;
 		transform: rotate(-120deg);
@@ -122,7 +123,11 @@
 		margin: 0 auto;
 	}
 }
-
+@media screen and (min-width: 1024px) and (max-width: 1199px) {
+    .returns-youth {
+        padding: 60px 0 80px !important;
+    }
+}
 @media screen and (max-width: 1199px) {
 	.returns-youth {
 		&-wrap {

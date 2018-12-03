@@ -84,6 +84,10 @@ input::-ms-clear {
 //   color: #779a0b;
 // }
 
+.block {
+  display: block;
+}
+
 .colortext {
   &-orange {
     color: #f57d02;
@@ -438,6 +442,7 @@ input::-ms-clear {
 @import "common/reviews.scss";
 @import "common/use.scss";
 @import "common/delivery.scss";
+@import "common/section-last.scss";
 @import "common/footer.scss";
 @import "common/popup.scss";
 

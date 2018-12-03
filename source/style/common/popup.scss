@@ -1,6 +1,8 @@
+
 .ever-popup {
 	background: rgba(232, 244, 249, 0.9) !important;
 }
+
 .ever-popup__inner {
 	width: 770px !important;
 }
@@ -38,7 +40,11 @@
 		margin: 0 0 -50px -65px;
 	}
 }
-
+@media screen and (min-width: 1024px) {
+	.ever-popup__inner {
+		margin-top: 60px !important;
+	}
+}
 @media screen and (max-width: 1023px) {
 	.ever-popup__inner {
 		width: 300px !important;

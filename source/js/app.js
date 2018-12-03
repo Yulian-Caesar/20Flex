@@ -174,6 +174,10 @@ function postDate(sa, countryName, isAbbreviated) {
             fo = formatstring || true;
 
         switch (fo) {
+            case "yyyy":
+                innerDate += "" + year;
+                return innerDate;
+
             case "mm.dd.yyyy":
                 innerDate += (month < 10) ? ("0" + month) : month;
                 innerDate += ".";
@@ -2819,3 +2823,10 @@ Version: 3.1.5
 $('.doctor__scroll').mCustomScrollbar({
     axis: 'y'
 })
+$(document).on('click', 'a[href^="#"]', function (event) {
+    event.preventDefault();
+
+    $('html, body').animate({
+        scrollTop: $($.attr(this, 'href')).offset().top
+    }, 1000);
+});

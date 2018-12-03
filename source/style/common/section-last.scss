@@ -1,0 +1,28 @@
+.section-last {
+  padding: 85px 0 100px;
+  max-height: none;
+  position: relative;
+  &:before {
+    content: "";
+    background: url("../img/section-last__before.png") no-repeat center;
+    position: absolute;
+    top: -25px;
+    left: 0;
+    transform: scale(1,-1);
+    height: 80px;
+    width: 100%;
+    z-index:12;
+  }
+}
+@media screen and (min-width: 1024px) and (max-width: 1199px) {
+  .section-last {
+      padding: 55px 0 100px !important;
+  }
+}
+@media screen and (max-width: 1023px) {
+  .section-last {
+    &:before {
+      display: none;
+    }
+  }
+}

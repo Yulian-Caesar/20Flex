@@ -46,6 +46,7 @@
     align-items: center;
     justify-content: center;
     z-index: 10;
+    cursor: pointer;
     &:hover svg .st0 {
       fill: #f57d02;
 
@@ -209,6 +210,11 @@
     }
 
   }
+}
+@media screen and (min-width: 1024px) and (max-width: 1199px) {
+    .reviews {
+        padding: 20px 0 40px !important;
+    }
 }
 @media screen and (max-width: 1023px){
   .reviews {

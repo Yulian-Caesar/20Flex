@@ -1,4 +1,5 @@
 .composition {
+	padding: 100px 0 120px;
 	@include bgImage(top, 700px);
 	.title {
 		margin-bottom: 59px;
@@ -64,9 +65,13 @@
 				left: -90px;
 				top: 18px;
 			}
+			.molecule1 {
+				max-width: 248px;
+			}
 			.molecule2 {
 				top: 8px;
 				left: -20px;
+				max-width: 160px;
 			}
 		}
 		.molecule-bg {
@@ -212,7 +217,11 @@
 		}
 	}
 }
-
+@media screen and (min-width: 1024px) and (max-width: 1199px) {
+    .composition {
+        padding: 80px 0 100px !important;
+    }
+}
 @media screen and (max-width:1199px) {
 	.composition {
 		&-info {

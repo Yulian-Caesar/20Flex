@@ -1,6 +1,6 @@
 .second-youth {
   @include bgImage(top, 148px);
-
+  padding: 110px 0 140px;
   &__content {
     width: 100%;
     display: flex;
@@ -33,7 +33,11 @@
     margin-top: 35px;
   }
 }
-
+@media screen and (min-width: 1024px) and (max-width: 1199px) {
+    .second-youth {
+        padding: 60px 0 80px !important;
+    }
+}
 @media screen and (max-width: 1199px) {
   .second-youth {
     &__content {
@@ -57,6 +61,7 @@
 
 @media screen and (max-width: 1023px) {
   .second-youth {
+    background: #e8f4f9;
     & br {
       display: none;
     }
