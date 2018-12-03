@@ -224,14 +224,20 @@
 			&__right {
 				padding: 0;
 				width: 100%;
-				// text-align: center;
+				text-align: center;
 				.title {
-					// justify-content: center;
+					justify-content: center;
 				}
 				.descr {
-					// justify-content: center;
+					justify-content: center;
 				}
 			}
+			&__left {
+				.title-img {
+					order: -1;
+					margin: 0 17px 0 0;
+				}
+			} 
 			&__right {
 				margin-bottom: 20px;
 			}
@@ -241,6 +247,12 @@
 				margin: 20px auto;
 				width: auto;
 				max-width: 100%;
+			}
+			&__item {
+				.pill-box {
+					order: -1;
+					margin: 0 20px 0 0;
+				}
 			}
 		}
 		&-box__arrow {
@@ -257,16 +269,16 @@
 @media screen and (max-width: 639px) {
 	.returns-youth {
 		&-wrap {
-			&__left,
-			&__right {
-				text-align: center;
-				.title {
-					justify-content: center;
-				}
-				.descr {
-					justify-content: center;
-				}
-			}
+			// &__left,
+			// &__right {
+			// 	text-align: center;
+			// 	.title {
+			// 		justify-content: center;
+			// 	}
+			// 	.descr {
+			// 		justify-content: center;
+			// 	}
+			// }
 			&__item {
 				.title {
 					font-size: 30px;

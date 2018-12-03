@@ -45,12 +45,6 @@
 		&-logo {
 			margin-right: 10px;
 		}
-	}
-}
-@media screen and (max-width: 767px) {
-	.footer {
-		padding: 20px 0 !important;
-		line-height: 1;
 		&-wrap {
 			flex-direction: column;
 			&__left,
@@ -66,5 +60,26 @@
 		&-logo {
 			margin: 0 0 10px;
 		} 
+	}
+}
+@media screen and (max-width: 767px) {
+	.footer {
+		padding: 20px 0 !important;
+		line-height: 1;
+		// &-wrap {
+		// 	flex-direction: column;
+		// 	&__left,
+		// 	&__center {
+		// 		span {
+		// 			display: none;
+		// 		}
+		// 	}
+		// 	&__right {
+		// 		display: none;
+		// 	}
+		// }
+		// &-logo {
+		// 	margin: 0 0 10px;
+		// } 
 	}
 }

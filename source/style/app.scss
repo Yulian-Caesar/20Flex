@@ -147,6 +147,7 @@ input::-ms-clear {
     display: inline-block;
     margin: 15px 0 10px;
     color: #656d76;
+    font-size: 13px; 
   }
   &-star {
     display: inline-block;
@@ -187,7 +188,7 @@ input::-ms-clear {
     display: block;
     font-size: 13px;
     &__old {
-      margin-bottom: 10px;
+      margin-bottom: 13px;
       color: #949494;
     }
     &__new {
@@ -199,9 +200,10 @@ input::-ms-clear {
     width: 1px;
     height: 62px;
     background: #e5e8e8;
-    margin: 0 18px 0 14px;
+    margin: 0 12px;
   }
   &-old {
+    padding-left: 5px;
     color: #e2e2e2;
     .x_currency {
       color: #e2e2e2;
@@ -243,7 +245,7 @@ input::-ms-clear {
 .lastpack-text {
   color: #000000;
   font-size: 16px;
-  margin-bottom: 20px;
+  margin-bottom: 17px;
 }
 .form-field {
   width: 100%;
@@ -265,30 +267,6 @@ input::-ms-clear {
   top: 50%;
   transform: translate(0, -50%); 
 }
-
-// .box-arrow {
-//   border-radius: 50%;
-//   width: 52px;
-//   height: 52px;
-//   display: -webkit-flex;
-//   display: -moz-flex;
-//   display: -ms-flex;
-//   display: -o-flex;
-//   display: flex;
-//   justify-content: center;
-//   align-items: center;
-//   background-color: #f4f7f9;
-// }
-// .navigation-arrow {
-//   display: -webkit-flex;
-//   display: -moz-flex;
-//   display: -ms-flex;
-//   display: -o-flex;
-//   display: flex;
-//   &:hover {
-//     fill: #f57d02;
-//   }
-// }
 
 .open-info {
   width: 25px;
@@ -425,6 +403,16 @@ input::-ms-clear {
     background-position: bottom $offset center, center;
   }
 }
+@mixin bgImage-composition($dir, $offset) {
+  background-image: url(../img/cloud-big.png), url(../img/composition-bg.svg);
+  background-repeat: no-repeat;
+  background-size: auto, 2560px 100%;
+  @if ($dir == 'top') {
+    background-position: top $offset center, center;
+  } @else if ($dir == 'bottom') {
+    background-position: bottom $offset center, center;
+  }
+}
 
 @import "common/slick.scss";
 @import "common/slick-theme.scss";
@@ -469,6 +457,12 @@ input::-ms-clear {
   }
   .title {
     font-size: 34px;
+  }
+  .wrong-treatment-btn,
+  .returns-youth-btn,
+  .reinforced-regeneration__btn,
+  .second-youth__btn {
+    margin-bottom: 8px;
   }
 }
 @media screen and (max-width: 767px){
